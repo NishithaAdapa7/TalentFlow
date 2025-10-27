@@ -1,6 +1,6 @@
 [
-  { "name": "Nishitha", "role": "user" },
+  { "name": "Nishitha", "role": "admin" },
   { "name": "Shivam", "role": "admin" },
   { "name": "Adithya", "role": "user" },
-  { "name": "Addapa", "role": "admin" }
+  { "name": "Shivani", "role": "admin" }
 ]

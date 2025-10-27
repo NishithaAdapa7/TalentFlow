@@ -41,12 +41,12 @@ const LoginPage = () => {
         <div className="input-group">
           <label>Role</label>
           <div className="role-buttons">
-            <button
+            {/* <button
               className={role === 'user' ? 'active' : ''}
               onClick={() => setRole('user')}
             >
               User
-            </button>
+            </button> */}
             <button
               className={role === 'admin' ? 'active' : ''}
               onClick={() => setRole('admin')}
