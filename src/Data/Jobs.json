@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "description": "Build responsive UI using React.",
+    "status": "active",
+    "order": 1,
+    "applicantsCount": 42
+  },
+  {
+    "id": 2,
+    "title": "Backend Engineer",
+    "description": "Work on APIs and database.",
+    "status": "archived",
+    "order": 2,
+    "applicantsCount": 30
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Designer",
+    "description": "Design beautiful user interfaces.",
+    "status": "active",
+    "order": 3,
+    "applicantsCount": 15
+  }
+]

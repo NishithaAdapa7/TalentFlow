@@ -1,0 +1,210 @@
+/* --- Global Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafc; /* Softer neutral background */
+  color: #1e293b;
+}
+
+/* --- Navbar Base --- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #3b82f6, #6366f1); /* Blue → Indigo gradient */
+  color: #f8fafc;
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid #cbd5e1;
+  border-radius: 0 0 16px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(99, 102, 241, 0.2);
+}
+
+/* --- Brand Section --- */
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.brand-name {
+  color: #a5f3fc; /* Cyan accent */
+  margin-left: 6px;
+}
+
+/* --- Center Links --- */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #f1f5f9;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  color: #a5f3fc;
+  transform: translateY(-2px);
+}
+
+/* --- Profile Section --- */
+.profile-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.profile-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: #ffffff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+}
+
+/* --- Dropdown --- */
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background: #ffffff;
+  color: #1e293b;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  min-width: 160px;
+  z-index: 1100;
+  border: 1px solid #e2e8f0;
+}
+
+.profile-container:hover .dropdown {
+  display: block;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+  border: none;
+  background: none;
+  color: #1e293b;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-item:hover {
+  background: #f1f5f9;
+}
+
+.logout {
+  color: #dc2626;
+}
+
+.logout:hover {
+  background: #fee2e2;
+}
+
+/* --- Hamburger Icon --- */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .navbar-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background: #ffffff;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.2rem 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .profile-container {
+    display: none;
+  }
+
+  .nav-link {
+    justify-content: center;
+    color: #334155;
+  }
+
+  .nav-link:hover {
+    color: #3b82f6;
+  }
+}
+
+/* --- Small Screen Tweaks --- */
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0.6rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}

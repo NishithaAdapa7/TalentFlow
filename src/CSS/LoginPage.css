@@ -1,0 +1,163 @@
+/* Full-screen flexible container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* modern gradient */
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card */
+.login-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Title */
+.login-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Input group */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+}
+
+/* Role buttons */
+.role-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.role-buttons button {
+  flex: 1 1 45%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #f0f0f0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-buttons button:hover {
+  background: #e0e0e0;
+}
+
+.role-buttons button.active {
+  background: #4facfe;
+  color: white;
+}
+
+/* Login button */
+.login-button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+/* ============================== */
+/* Responsive adjustments */
+/* ============================== */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 30px;
+    max-width: 350px;
+  }
+
+  .login-title {
+    font-size: 26px;
+  }
+
+  .input-group input {
+    font-size: 15px;
+  }
+
+  .role-buttons button {
+    flex: 1 1 48%;
+    font-size: 14px;
+  }
+
+  .login-button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+  }
+
+  .role-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .role-buttons button {
+    flex: 1 1 100%;
+  }
+
+  .login-button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
