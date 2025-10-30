@@ -15,8 +15,8 @@ import AssessmentsList from './Admin/Assessments/Assessments';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/admin" element={<AdminDashboard />} />
+      {/* <Route path="/" element={<LoginPage />} /> */}
+      <Route path="/" element={<AdminDashboard />} />
       <Route path="/user" element={<UserDashboard />} />
       <Route path="/admin" element={<AddJob/>} />
        <Route path="/jobs/:id" element={<JobDetail/>} />
